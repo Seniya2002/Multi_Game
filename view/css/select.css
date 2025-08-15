@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Patrick Hand', cursive;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.difficulty-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.difficulty-title {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.difficulty-options {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.difficulty-btn {
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.difficulty-btn.selected {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+.easy { background-color: #2ecc71; }
+.medium { background-color: #f1c40f; }
+.hard { background-color: #e74c3c; }
+
+.easy:hover { background-color: #27ae60; }
+.medium:hover { background-color: #f39c12; }
+.hard:hover { background-color: #c0392b; }
+
+.start-game-btn {
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #9b59b6;
+    color: white;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.start-game-btn:hover {
+    background-color: #8e44ad;
+    transform: translateY(-2px);
+}
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.icon {
+    position: absolute;
+    opacity: 0.2;
+    animation: float 8s infinite linear;
+    font-size: 2rem;
+    font-family: 'Comic Neue', cursive;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@media (max-width: 768px) {
+    .difficulty-title { font-size: 2rem; }
+    .difficulty-btn { font-size: 1.1rem; padding: 1rem 1.5rem; }
+    .start-game-btn { font-size: 1.2rem; padding: 1rem 2rem; }
+}

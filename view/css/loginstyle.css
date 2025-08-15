@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Patrick Hand', cursive;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-title {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Comic Neue', cursive;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #9b59b6;
+    background: rgba(255,255,255,0.2);
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.auth-button {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #9b59b6;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Comic Neue', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.auth-button:hover {
+    background: #8e44ad;
+    transform: translateY(-2px);
+}
+
+.switch-form {
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.switch-form a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.switch-form a:hover {
+    color: #f39c12;
+}
+
+/* Floating Icons */
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.icon {
+    position: absolute;
+    opacity: 0.2;
+    animation: float 8s infinite linear;
+    font-size: 2rem;
+    font-family: 'Comic Neue', cursive;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
